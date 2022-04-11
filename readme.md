@@ -39,15 +39,16 @@ public class App02 {
 * When we run above program the class gets loaded and as a result the static blocks executed in order.
 <br/>
 output:
-```java
+
+```text
 static block 1
 static block 2
 ```
 ## Static Block and Main method
 code: `com.java.basics.App03`
 * Static blocks always execute before the execution of main method. 
-* The signature of main method is `public static void main(String[] args)`
-```java
+* The signature of main method is `public static void main(String[] args)
+```JAVA
 public class App03 {
     static {
         System.out.println("static block 1");
@@ -61,7 +62,8 @@ public class App03 {
 }
 ```
 output:
-```java
+
+```text
 static block 1
 static block 2
 from main method
