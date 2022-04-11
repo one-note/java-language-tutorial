@@ -39,7 +39,7 @@ public class App02 {
 * When we run above program the class gets loaded and as a result the static blocks executed in order.
 <br/>
 output:
-```
+```java
 static block 1
 static block 2
 ```
@@ -61,7 +61,7 @@ public class App03 {
 }
 ```
 output:
-```
+```java
 static block 1
 static block 2
 from main method
