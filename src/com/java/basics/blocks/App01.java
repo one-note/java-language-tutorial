@@ -1,4 +1,4 @@
-package com.java.basics;
+package com.java.basics.blocks;
 
 public class App01 {
 
