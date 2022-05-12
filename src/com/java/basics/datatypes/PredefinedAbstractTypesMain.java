@@ -5,11 +5,12 @@ import java.util.Arrays;
 public class PredefinedAbstractTypesMain {
 
     public static void main(String[] args) {
-        stringTypeExample();
 
         sizeOfWrapperTypes();
 
         rangeOfWrapperTypes();
+
+        stringTypeExample();
 
         stringToNumberFormat();
 
@@ -20,7 +21,7 @@ public class PredefinedAbstractTypesMain {
     private static void numberFormatException()
     {
         String s1 = "12we";
-        System.out.println(Integer.valueOf(s1));
+        System.out.println(Integer.valueOf(s1));   // valueOf(..) is a static method defined in Integer class and accessed using class Name
     }
 
     private static void stringToNumberFormat()
@@ -39,6 +40,10 @@ public class PredefinedAbstractTypesMain {
      */
     private static void rangeOfWrapperTypes()
     {
+        /**
+         * MAX_VALUE is a static constant accessed using Class Name only
+         * MIN_VALUE is a static constant accessed using Class Name only
+         */
         System.out.println("Character: "+ Character.MAX_VALUE+" "+Character.MIN_VALUE);
         System.out.println("Short: "+ Short.MAX_VALUE+" "+Short.MIN_VALUE);
         System.out.println("Integer: "+ Integer.MAX_VALUE+" "+Integer.MIN_VALUE);
@@ -50,7 +55,7 @@ public class PredefinedAbstractTypesMain {
 
     private static void sizeOfWrapperTypes()
     {
-        System.out.println(Character.SIZE);
+        System.out.println(Character.SIZE); // Here SIZE is static constant so we are able to access using class name without creating object
         System.out.println(Short.SIZE);
         System.out.println(Integer.SIZE);
         System.out.println(Long.SIZE);
@@ -59,13 +64,22 @@ public class PredefinedAbstractTypesMain {
         System.out.println(Byte.SIZE);
 //        System.out.println(Boolean.SIZE); 1 bit
     }
+
     private static void wrapperTypes() {
-        // char , byte, int, long,
-        // float, double, boolean, short
         /**
+         * Wrapper types are the object representation of primitive types.
+         */
+        // byte,
+        // char , short,
+        // int, long,
+        // float, double,
+        // boolean
+        /**
+         * Show each wrapper type class with ctrl + click
+         *
          * {@link Byte }
+         * {@link Character}
          * {@link Short }
-         * {@link Character }
          * {@link Integer }
          * {@link Long }
          * {@link Float }

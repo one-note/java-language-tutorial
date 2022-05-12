@@ -1,11 +1,11 @@
 package com.java.basics.datatypes;
 
-public class UserDefinedAbstractTypesMain {
+public class ReferenceTypeMain1 {
 
 
     /**
      * UserDefinedTypes also known as CustomTypes or ComplexTypes or ReferenceTypes
-     * They can have fields and behaviours(methods)
+     * They can have fields/states and behaviours(non-static methods). Static methods are not behaviours of objects as they never access the non-static fields.
      * @param args
      */
     public static void main(String[] args) {
@@ -34,9 +34,7 @@ public class UserDefinedAbstractTypesMain {
         String customerName; // of type String
         boolean status; // of type boolean
 
-        // it has a method below
-
-
+        // it has a non-static-method(behaviour) below
         public String getCardNum() {
             return cardNum;
         }
