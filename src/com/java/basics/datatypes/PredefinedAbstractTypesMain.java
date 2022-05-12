@@ -10,7 +10,11 @@ public class PredefinedAbstractTypesMain {
 
         rangeOfWrapperTypes();
 
+        wrapperTypes();
+
         stringTypeExample();
+
+        stringBufferTypeExample();
 
         stringToNumberFormat();
 
@@ -221,7 +225,7 @@ public class PredefinedAbstractTypesMain {
         result = creditCard.contains("11");
         System.out.println("contains a substring: " + result);
 
-        creditCard.concat("-5555"); // immutablity of string
+        creditCard.concat("-5555"); // immutablity of string: you cant modify the string variables using concat
         System.out.println("creditcard wont be append here due to immutable string: " + creditCard);
 
         String creditCard1 = creditCard.concat("-5555");
@@ -232,7 +236,7 @@ public class PredefinedAbstractTypesMain {
 
     private static void stringBufferTypeExample() {
         StringBuffer sb = new StringBuffer("world");
-        sb.append("is beautiful");
+        sb.append("is beautiful"); // you can modify the stringbuffer so it is immutable.
         int len = sb.length();
         System.out.println("length of sb: " + len);
 

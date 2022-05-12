@@ -1,6 +1,6 @@
-package com.java.basics.typecasting;
+package com.java.basics.datatypes;
 
-public class TypeCastingMain {
+public class TypeCastingPrimitiveMain {
 
     public static void main(String[] args) {
         m1();
