@@ -2,8 +2,9 @@
 cd ../../build # move to build directory
 ls -ltr # show content of build directory
 echo "build directory: "
-pwd
+pwd # prints present working directory
 <<COMMENT
+
 * app.jar is present under the current directory i.e. build.
 * so in the below command we are using . or ./
 * java will search and load the class com.java.basics.terminal.App1 from current directory
@@ -20,9 +21,10 @@ java -cp .:./app.jar com.java.basics.terminal.App1 AB CD EFG # colon : acts as a
 cd - # back to terminal directory
 
 echo "terminal directory"
-pwd
+pwd # prints present working directory
 
 ## Accessing jar with relative path
+## we are in terminal directory but we are accessing build directory.
 java -cp ../../build com.java.basics.terminal.App1 AB CD EFG # searching class in build directory
 java -cp ../../build/app.jar com.java.basics.terminal.App1 AB CD EFG # searching class in app.jar only
 

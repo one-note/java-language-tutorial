@@ -14,7 +14,8 @@ public class ControlLoops {
 
         continueWithInLoop(arr1);
 
-        returnStatement();
+        returnStatement(); // once return encountered in this method the remaining statements of this method won't execute
+        System.out.println("return statement done"); // but this statement will execute as it is on main method
     }
 
     private static void returnStatement() {
@@ -25,10 +26,11 @@ public class ControlLoops {
         // otherwise print the ascii values
 
         int len = s.length();
-        if (len % 2 == 0) {
+        if (len % 2 == 0) { // length of string is even
             System.out.println("length is: " + len);
             System.out.println("returning now");
             return; // once return; statement (also return x;) is encountered then control goes out of that method
+            // after this line it won't execute
         }
 
         // print ascii values
