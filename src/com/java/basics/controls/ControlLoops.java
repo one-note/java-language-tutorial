@@ -41,6 +41,10 @@ public class ControlLoops {
         }
     }
 
+    /**
+     * continue keyword used inside a loop to move the control to next iteration by skipping the remaining lines of code
+     * @param arr1
+     */
     private static void continueWithInLoop(int[] arr1) {
         // count how many numbers are below 11.
         int count = 0;
@@ -61,6 +65,10 @@ public class ControlLoops {
         System.out.println("outside continue: numbers below 11 count is: " + count);
     }
 
+    /**
+     * break keyword used to move the control out of the loop
+     * @param arr1
+     */
     private static void breakFromLoop(int[] arr1) {
         // count how many numbers are below 11.
         int count = 0;
@@ -69,6 +77,7 @@ public class ControlLoops {
                 break; // can we use return statement here such as return;
             /**
              * once break is encountered then control goes out of the loop.
+             * below lines wont execute if break encountered
              */
             // execute complex logic below
             // increase counter.

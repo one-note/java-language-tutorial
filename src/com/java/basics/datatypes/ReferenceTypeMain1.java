@@ -10,7 +10,7 @@ public class ReferenceTypeMain1 {
      */
     public static void main(String[] args) {
 
-        CreditCard c = new CreditCard();
+        CreditCard c = new CreditCard();  // creating object using new operator
         c.cardNum ="1111-2222-3333-4444";
         c.customerName="John";
         c.status=true;
@@ -26,10 +26,28 @@ public class ReferenceTypeMain1 {
         System.out.println(c);
         System.out.println(c2);
 
+        Employee e = new Employee(10); // object reference outside class Employee
+        System.out.println(e.id);
+
+    }
+
+
+    private static class Employee
+    {
+        public int id;
+
+        public Employee(int id) {
+            id = id;
+            this.id = id; // object reference inside the class itself. debug here you can see `this` and `e` have same reference
+        }
+
+
+
     }
 
     private static class CreditCard
     {
+        // below are the fields of the class
         String cardNum; // of type String
         String customerName; // of type String
         boolean status; // of type boolean
@@ -39,9 +57,10 @@ public class ReferenceTypeMain1 {
             return cardNum;
         }
 
+        // method overriding
         @Override
         public String toString() {
-            return "CreditCard{" +
+            return "The CreditCard{" +
                     "cardNum='" + cardNum + '\'' +
                     ", customerName='" + customerName + '\'' +
                     ", status=" + status +
