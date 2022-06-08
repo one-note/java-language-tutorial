@@ -28,3 +28,6 @@
 * PredefinedAbstractTypesMain stringToNumberFormat()
 * PredefinedAbstractTypesMain numberFormatException()
 * TypeCastingPrimitiveMain
+
+## Java Docs
+String class Java Docs: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html

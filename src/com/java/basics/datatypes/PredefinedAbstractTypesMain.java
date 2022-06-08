@@ -6,19 +6,22 @@ public class PredefinedAbstractTypesMain {
 
     public static void main(String[] args) {
 
-        sizeOfWrapperTypes();
+        String s = new String();
+        Object o =  s.getClass().getGenericSuperclass();
+        System.out.println(o);
+  //      sizeOfWrapperTypes();
+//
+  //      rangeOfWrapperTypes();
+//
+   //     wrapperTypes();
 
-        rangeOfWrapperTypes();
+  //      stringTypeExample();
 
-        wrapperTypes();
-
-        stringTypeExample();
-
-        stringBufferTypeExample();
-
-        stringToNumberFormat();
-
-        numberFormatException();
+   //     stringBufferTypeExample();
+//
+   //    stringToNumberFormat();
+//
+    //    numberFormatException();
 
     }
 
@@ -66,7 +69,7 @@ public class PredefinedAbstractTypesMain {
         System.out.println(Float.SIZE);
         System.out.println(Double.SIZE);
         System.out.println(Byte.SIZE);
-//        System.out.println(Boolean.SIZE); 1 bit
+      //  System.out.println(Boolean.SIZE); 1 bit
     }
 
     private static void wrapperTypes() {
@@ -94,9 +97,16 @@ public class PredefinedAbstractTypesMain {
         /**
          * Show the respective wrapper classes. For example: java.lang.Integer
          */
-        char c = 'a'; // primitive
-        Character c1 = c; // wrapper or object (autoboxing: compiler converts primitive type to corresponding wrapper type)
-        c = c1; // auto unboxing (wrapper to primitive type)
+        char c_primitive = 'a'; // primitive
+        Character c_wrapper_type = c_primitive; // wrapper or object (autoboxing: compiler converts primitive type to corresponding wrapper type)
+        c_primitive = c_wrapper_type; // auto unboxing (wrapper to primitive type)
+
+        Character c1 = new Character('b'); // wrapper types used in collection API
+        char c2 = 'b'; // primitives not used with collection API
+        System.out.println(c1.compareTo('d'));
+        System.out.println(c2);
+        System.out.println(c_primitive);
+        System.out.println(c_wrapper_type);
 
         byte b = 97;
         Byte b1 = b;
@@ -137,7 +147,7 @@ public class PredefinedAbstractTypesMain {
 
         String s1 = new String("Java");
         String s2 = new String("Java");
-        boolean result = s1.equals(s2); // String class has overridden the equals method from Object class.
+        boolean result = s1.equals(s2); // String class has overridden the equals method from Object class for content comparison.
         System.out.println("both string are equal: " + result);
         result = s1.equalsIgnoreCase("JAVA");
         System.out.println("both string are equal due to equalsIgnoreCase: " + result);
@@ -156,7 +166,7 @@ public class PredefinedAbstractTypesMain {
 
         String s6 = s5.intern(); // gives access to scp
         result = s3 == s6;
-        System.out.println("string constant pool and heap: " + result); // true
+        System.out.println("string constant pool and heap(to scp access): " + result); // true
 
         System.out.println(s3.hashCode()); // scp
         System.out.println(s4.hashCode()); // scp
@@ -196,7 +206,7 @@ public class PredefinedAbstractTypesMain {
         System.out.println("comparing same string with ignore case: " + strCmp2.compareToIgnoreCase("ACF"));
 
         String d1 = "Java code needs compilation";
-        char[] chars = d1.toCharArray();
+        char[] chars = d1.toCharArray();// every array is an object
         System.out.println("string as char array: " + chars);
         System.out.println("string as char array (0 indexed): " + Arrays.toString(chars));
 
@@ -235,6 +245,7 @@ public class PredefinedAbstractTypesMain {
     }
 
     private static void stringBufferTypeExample() {
+        // all the methods of string buffer class are synchronized so it is a thread safe class.
         StringBuffer sb = new StringBuffer("world");
         sb.append("is beautiful"); // you can modify the stringbuffer so it is immutable.
         int len = sb.length();
@@ -245,6 +256,16 @@ public class PredefinedAbstractTypesMain {
         boolean result = s1.equals(s2); // StringBuffer class has not overridden the equals method from Object class.
 
         System.out.println("both stringbuffer are not equal: " + result);
+
+//        String reverseValue = new String("JAVA").reverse();
+
+        StringBuffer reverseValue = new StringBuffer("JAVA");
+        System.out.println(reverseValue.reverse());
+
+        String trimStr = " world is good ";
+        System.out.println(trimStr.trim());
+
+        System.out.println("====hashcode====");
     }
 
 }

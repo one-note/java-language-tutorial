@@ -34,13 +34,19 @@ public class ReferenceTypeMain1 {
 
     private static class Employee
     {
-        public int id;
+        public int id;// state
 
         public Employee(int id) {
             id = id;
             this.id = id; // object reference inside the class itself. debug here you can see `this` and `e` have same reference
+            this.display();
         }
 
+
+        public void display() // it must be non-static method. this keyword should not be used with static methods.
+        {
+            System.out.println(this.id);
+        }
 
 
     }
