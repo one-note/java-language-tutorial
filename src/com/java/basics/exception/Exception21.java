@@ -13,7 +13,14 @@ public class Exception21 {
         loginInput.password = "pass@123";
 
         LoginRepository loginRepository = new LoginRepository();
-        boolean result = loginRepository.validateLogin(loginInput);
+        boolean result = false;
+        try {
+            result = loginRepository.validateLogin(loginInput);
+        }catch (LoginFailureException e) {
+            System.out.println(e.getMessage()+":401"); // this is for user or client
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println(result);
 
     }
