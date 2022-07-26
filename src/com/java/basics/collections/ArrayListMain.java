@@ -9,6 +9,9 @@ import java.util.*;
 // update
 // contains
 // size can be increased dynamically
+
+
+// stack, queue, linked list, vector, hashtable, map(3), set(3)
 public class ArrayListMain {
 
 
