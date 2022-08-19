@@ -5,6 +5,11 @@ public class App1 {
     /**
      * Using runtime args to main method
      * @param args
+     *
+     *
+     *
+     *
+     *
      */
     public static void main(String[] args) {
         if (args.length == 0) {
